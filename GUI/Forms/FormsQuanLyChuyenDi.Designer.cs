@@ -40,7 +40,7 @@
             this.txtDiemDi = new System.Windows.Forms.TextBox();
             this.txtDiemDen = new System.Windows.Forms.TextBox();
             this.txtGiaVe = new System.Windows.Forms.TextBox();
-            this.grid_DSChuyenDi = new System.Windows.Forms.DataGridView();
+            this.dgvChuyenDi = new System.Windows.Forms.DataGridView();
             this.colChuyenDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGioDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@
             this.btnCapNhat = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_DSChuyenDi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDi)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMaCD
@@ -120,6 +120,7 @@
             this.txtMaCD.Name = "txtMaCD";
             this.txtMaCD.Size = new System.Drawing.Size(146, 20);
             this.txtMaCD.TabIndex = 6;
+            this.txtMaCD.Enabled = false;
             // 
             // txtGioKhoiHanh
             // 
@@ -156,20 +157,21 @@
             this.txtGiaVe.Size = new System.Drawing.Size(148, 20);
             this.txtGiaVe.TabIndex = 11;
             // 
-            // grid_DSChuyenDi
+            // dgvChuyenDi
             // 
-            this.grid_DSChuyenDi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_DSChuyenDi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvChuyenDi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChuyenDi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colChuyenDi,
             this.colNgayDi,
             this.colGioDi,
             this.colNoiXuatPhat,
             this.colDiemDen,
             this.colGiaVe});
-            this.grid_DSChuyenDi.Location = new System.Drawing.Point(138, 184);
-            this.grid_DSChuyenDi.Name = "grid_DSChuyenDi";
-            this.grid_DSChuyenDi.Size = new System.Drawing.Size(783, 290);
-            this.grid_DSChuyenDi.TabIndex = 12;
+            this.dgvChuyenDi.Location = new System.Drawing.Point(138, 184);
+            this.dgvChuyenDi.Name = "dgvChuyenDi";
+            this.dgvChuyenDi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvChuyenDi.Size = new System.Drawing.Size(783, 290);
+            this.dgvChuyenDi.TabIndex = 12;
             // 
             // colChuyenDi
             // 
@@ -286,7 +288,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.grid_DSChuyenDi);
+            this.Controls.Add(this.dgvChuyenDi);
             this.Controls.Add(this.txtGiaVe);
             this.Controls.Add(this.txtDiemDen);
             this.Controls.Add(this.txtDiemDi);
@@ -302,7 +304,7 @@
             this.Name = "FormsQuanLyChuyenDi";
             this.Text = "Quản Lý Chuyến Đi";
             this.Load += new System.EventHandler(this.FormsQuanLyChuyenDi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grid_DSChuyenDi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,7 +324,7 @@
         private System.Windows.Forms.TextBox txtDiemDi;
         private System.Windows.Forms.TextBox txtDiemDen;
         private System.Windows.Forms.TextBox txtGiaVe;
-        private System.Windows.Forms.DataGridView grid_DSChuyenDi;
+        private System.Windows.Forms.DataGridView dgvChuyenDi;
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnCapNhat;
         private FontAwesome.Sharp.IconButton btnSua;

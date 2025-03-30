@@ -52,6 +52,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblGheDangChon = new System.Windows.Forms.Label();
+            this.lblGheDaCoNguoi = new System.Windows.Forms.Label();
+            this.lblGheBanDangChon = new System.Windows.Forms.Label();
             this.btnChonGhe = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTangDuoi = new System.Windows.Forms.Label();
@@ -108,6 +114,7 @@
             // comboDiemDen
             // 
             this.comboDiemDen.DisplayMember = "diemDen";
+            this.comboDiemDen.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDiemDen.FormattingEnabled = true;
             this.comboDiemDen.Location = new System.Drawing.Point(307, 63);
             this.comboDiemDen.Name = "comboDiemDen";
@@ -117,6 +124,7 @@
             // comboDiemDi
             // 
             this.comboDiemDi.DisplayMember = "diemDi";
+            this.comboDiemDi.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDiemDi.FormattingEnabled = true;
             this.comboDiemDi.Location = new System.Drawing.Point(307, 31);
             this.comboDiemDi.Name = "comboDiemDi";
@@ -126,6 +134,7 @@
             // comboChonGio
             // 
             this.comboChonGio.DisplayMember = "gioDi";
+            this.comboChonGio.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboChonGio.FormattingEnabled = true;
             this.comboChonGio.Location = new System.Drawing.Point(78, 31);
             this.comboChonGio.Name = "comboChonGio";
@@ -300,6 +309,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.panel4);
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Controls.Add(this.panel1);
+            this.groupBox3.Controls.Add(this.lblGheDangChon);
+            this.groupBox3.Controls.Add(this.lblGheDaCoNguoi);
+            this.groupBox3.Controls.Add(this.lblGheBanDangChon);
             this.groupBox3.Controls.Add(this.btnChonGhe);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.lblTangDuoi);
@@ -312,6 +327,63 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chọn Ghế Ngồi";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Location = new System.Drawing.Point(376, 370);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(20, 20);
+            this.panel4.TabIndex = 16;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Orange;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Location = new System.Drawing.Point(376, 331);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(20, 20);
+            this.panel3.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(376, 290);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(20, 20);
+            this.panel1.TabIndex = 13;
+            // 
+            // lblGheDangChon
+            // 
+            this.lblGheDangChon.AutoSize = true;
+            this.lblGheDangChon.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGheDangChon.Location = new System.Drawing.Point(250, 370);
+            this.lblGheDangChon.Name = "lblGheDangChon";
+            this.lblGheDangChon.Size = new System.Drawing.Size(96, 13);
+            this.lblGheDangChon.TabIndex = 12;
+            this.lblGheDangChon.Text = "Ghế Đang Chọn:";
+            // 
+            // lblGheDaCoNguoi
+            // 
+            this.lblGheDaCoNguoi.AutoSize = true;
+            this.lblGheDaCoNguoi.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGheDaCoNguoi.Location = new System.Drawing.Point(250, 331);
+            this.lblGheDaCoNguoi.Name = "lblGheDaCoNguoi";
+            this.lblGheDaCoNguoi.Size = new System.Drawing.Size(103, 13);
+            this.lblGheDaCoNguoi.TabIndex = 11;
+            this.lblGheDaCoNguoi.Text = "Ghế Đã Có Người:";
+            // 
+            // lblGheBanDangChon
+            // 
+            this.lblGheBanDangChon.AutoSize = true;
+            this.lblGheBanDangChon.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGheBanDangChon.Location = new System.Drawing.Point(250, 292);
+            this.lblGheBanDangChon.Name = "lblGheBanDangChon";
+            this.lblGheBanDangChon.Size = new System.Drawing.Size(117, 13);
+            this.lblGheBanDangChon.TabIndex = 10;
+            this.lblGheBanDangChon.Text = "Ghế bạn đang chọn:";
             // 
             // btnChonGhe
             // 
@@ -411,5 +483,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTangDuoi;
         private FontAwesome.Sharp.IconButton btnChonGhe;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblGheDangChon;
+        private System.Windows.Forms.Label lblGheDaCoNguoi;
+        private System.Windows.Forms.Label lblGheBanDangChon;
     }
 }

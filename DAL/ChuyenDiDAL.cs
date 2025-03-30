@@ -12,7 +12,7 @@ namespace DAL
     {
         SqlConnectionData sql = new SqlConnectionData();
 
-        public DataTable LoadDSChuyenDi()
+        public DataTable GetChuyenDi()
         {
             DataTable table_chuyendi = new DataTable();
             using (SqlConnection conn = SqlConnectionData.Connect())

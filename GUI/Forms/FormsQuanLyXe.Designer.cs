@@ -29,44 +29,51 @@
         private void InitializeComponent()
         {
             this.grThongTinXe = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtTaiXe = new System.Windows.Forms.TextBox();
+            this.txtTenXe = new System.Windows.Forms.TextBox();
+            this.txtBienSo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grThongTinVeXe = new System.Windows.Forms.GroupBox();
+            this.UDSoLuong = new System.Windows.Forms.NumericUpDown();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.txtMaChuyen = new System.Windows.Forms.TextBox();
             this.lblMaChuyen = new System.Windows.Forms.Label();
             this.txtBienSo_TTVX = new System.Windows.Forms.TextBox();
             this.lblBienSo_TTVX = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLuuXe = new FontAwesome.Sharp.IconButton();
-            this.btnSuaXe = new FontAwesome.Sharp.IconButton();
-            this.btnXoaXe = new FontAwesome.Sharp.IconButton();
-            this.btnXoaVeXe = new FontAwesome.Sharp.IconButton();
-            this.btnSuaVeXe = new FontAwesome.Sharp.IconButton();
-            this.btnThemVeXe = new FontAwesome.Sharp.IconButton();
-            this.UpDownSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.dgvXe = new System.Windows.Forms.DataGridView();
+            this.colBienSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grDSThongTinVeXe = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvTTVX = new System.Windows.Forms.DataGridView();
+            this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
+            this.btnCapNhat = new FontAwesome.Sharp.IconButton();
+            this.btnThem_TTVX = new FontAwesome.Sharp.IconButton();
+            this.btnXoa_TTVX = new FontAwesome.Sharp.IconButton();
+            this.btnSua_TTVX = new FontAwesome.Sharp.IconButton();
+            this.colBienSoTTVX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grThongTinXe.SuspendLayout();
             this.grThongTinVeXe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UpDownSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.grDSThongTinVeXe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTTVX)).BeginInit();
             this.SuspendLayout();
             // 
             // grThongTinXe
             // 
-            this.grThongTinXe.Controls.Add(this.textBox4);
-            this.grThongTinXe.Controls.Add(this.textBox3);
-            this.grThongTinXe.Controls.Add(this.textBox2);
-            this.grThongTinXe.Controls.Add(this.textBox1);
+            this.grThongTinXe.Controls.Add(this.txtSoDienThoai);
+            this.grThongTinXe.Controls.Add(this.txtTaiXe);
+            this.grThongTinXe.Controls.Add(this.txtTenXe);
+            this.grThongTinXe.Controls.Add(this.txtBienSo);
             this.grThongTinXe.Controls.Add(this.label4);
             this.grThongTinXe.Controls.Add(this.label3);
             this.grThongTinXe.Controls.Add(this.label2);
@@ -79,33 +86,37 @@
             this.grThongTinXe.TabStop = false;
             this.grThongTinXe.Text = "Thông Tin Xe";
             // 
-            // textBox4
+            // txtSoDienThoai
             // 
-            this.textBox4.Location = new System.Drawing.Point(260, 63);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(116, 27);
-            this.textBox4.TabIndex = 7;
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Location = new System.Drawing.Point(260, 66);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(137, 23);
+            this.txtSoDienThoai.TabIndex = 7;
             // 
-            // textBox3
+            // txtTaiXe
             // 
-            this.textBox3.Location = new System.Drawing.Point(261, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(115, 27);
-            this.textBox3.TabIndex = 6;
+            this.txtTaiXe.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiXe.Location = new System.Drawing.Point(261, 30);
+            this.txtTaiXe.Name = "txtTaiXe";
+            this.txtTaiXe.Size = new System.Drawing.Size(136, 23);
+            this.txtTaiXe.TabIndex = 6;
             // 
-            // textBox2
+            // txtTenXe
             // 
-            this.textBox2.Location = new System.Drawing.Point(71, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 27);
-            this.textBox2.TabIndex = 5;
+            this.txtTenXe.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenXe.Location = new System.Drawing.Point(65, 66);
+            this.txtTenXe.Name = "txtTenXe";
+            this.txtTenXe.Size = new System.Drawing.Size(134, 23);
+            this.txtTenXe.TabIndex = 5;
             // 
-            // textBox1
+            // txtBienSo
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 27);
-            this.textBox1.TabIndex = 4;
+            this.txtBienSo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBienSo.Location = new System.Drawing.Point(65, 31);
+            this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.Size = new System.Drawing.Size(134, 23);
+            this.txtBienSo.TabIndex = 4;
             // 
             // label4
             // 
@@ -149,7 +160,7 @@
             // 
             // grThongTinVeXe
             // 
-            this.grThongTinVeXe.Controls.Add(this.UpDownSoLuong);
+            this.grThongTinVeXe.Controls.Add(this.UDSoLuong);
             this.grThongTinVeXe.Controls.Add(this.lblSoLuong);
             this.grThongTinVeXe.Controls.Add(this.txtMaChuyen);
             this.grThongTinVeXe.Controls.Add(this.lblMaChuyen);
@@ -163,19 +174,26 @@
             this.grThongTinVeXe.TabStop = false;
             this.grThongTinVeXe.Text = "Thông Tin Vé Xe";
             // 
+            // UDSoLuong
+            // 
+            this.UDSoLuong.Location = new System.Drawing.Point(320, 27);
+            this.UDSoLuong.Name = "UDSoLuong";
+            this.UDSoLuong.Size = new System.Drawing.Size(78, 27);
+            this.UDSoLuong.TabIndex = 13;
+            // 
             // lblSoLuong
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(211, 31);
+            this.lblSoLuong.Location = new System.Drawing.Point(243, 32);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(61, 16);
+            this.lblSoLuong.Size = new System.Drawing.Size(66, 16);
             this.lblSoLuong.TabIndex = 12;
-            this.lblSoLuong.Text = "Số Lượng";
+            this.lblSoLuong.Text = "Số Lượng:";
             // 
             // txtMaChuyen
             // 
-            this.txtMaChuyen.Location = new System.Drawing.Point(72, 63);
+            this.txtMaChuyen.Location = new System.Drawing.Point(88, 62);
             this.txtMaChuyen.Name = "txtMaChuyen";
             this.txtMaChuyen.Size = new System.Drawing.Size(134, 27);
             this.txtMaChuyen.TabIndex = 11;
@@ -192,7 +210,7 @@
             // 
             // txtBienSo_TTVX
             // 
-            this.txtBienSo_TTVX.Location = new System.Drawing.Point(72, 26);
+            this.txtBienSo_TTVX.Location = new System.Drawing.Point(88, 25);
             this.txtBienSo_TTVX.Name = "txtBienSo_TTVX";
             this.txtBienSo_TTVX.Size = new System.Drawing.Size(134, 27);
             this.txtBienSo_TTVX.TabIndex = 9;
@@ -207,96 +225,47 @@
             this.lblBienSo_TTVX.TabIndex = 8;
             this.lblBienSo_TTVX.Text = "Biển Số:";
             // 
-            // dataGridView1
+            // dgvXe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(116, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(403, 244);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colBienSo,
+            this.colTenXe,
+            this.colTaiXe,
+            this.colSoDienThoai});
+            this.dgvXe.Location = new System.Drawing.Point(116, 196);
+            this.dgvXe.Name = "dgvXe";
+            this.dgvXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvXe.Size = new System.Drawing.Size(403, 244);
+            this.dgvXe.TabIndex = 2;
             // 
-            // btnLuuXe
+            // colBienSo
             // 
-            this.btnLuuXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnLuuXe.IconColor = System.Drawing.Color.Black;
-            this.btnLuuXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLuuXe.Location = new System.Drawing.Point(233, 468);
-            this.btnLuuXe.Name = "btnLuuXe";
-            this.btnLuuXe.Size = new System.Drawing.Size(75, 23);
-            this.btnLuuXe.TabIndex = 4;
-            this.btnLuuXe.Text = "Lưu";
-            this.btnLuuXe.UseVisualStyleBackColor = true;
+            this.colBienSo.DataPropertyName = "bienSo";
+            this.colBienSo.HeaderText = "Biển Số";
+            this.colBienSo.Name = "colBienSo";
             // 
-            // btnSuaXe
+            // colTenXe
             // 
-            this.btnSuaXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSuaXe.IconColor = System.Drawing.Color.Black;
-            this.btnSuaXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSuaXe.Location = new System.Drawing.Point(340, 468);
-            this.btnSuaXe.Name = "btnSuaXe";
-            this.btnSuaXe.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaXe.TabIndex = 5;
-            this.btnSuaXe.Text = "Sửa";
-            this.btnSuaXe.UseVisualStyleBackColor = true;
+            this.colTenXe.DataPropertyName = "tenXe";
+            this.colTenXe.HeaderText = "Tên Xe";
+            this.colTenXe.Name = "colTenXe";
             // 
-            // btnXoaXe
+            // colTaiXe
             // 
-            this.btnXoaXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnXoaXe.IconColor = System.Drawing.Color.Black;
-            this.btnXoaXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoaXe.Location = new System.Drawing.Point(444, 468);
-            this.btnXoaXe.Name = "btnXoaXe";
-            this.btnXoaXe.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaXe.TabIndex = 6;
-            this.btnXoaXe.Text = "Xóa";
-            this.btnXoaXe.UseVisualStyleBackColor = true;
+            this.colTaiXe.DataPropertyName = "taiXe";
+            this.colTaiXe.HeaderText = "Tài Xế";
+            this.colTaiXe.Name = "colTaiXe";
             // 
-            // btnXoaVeXe
+            // colSoDienThoai
             // 
-            this.btnXoaVeXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnXoaVeXe.IconColor = System.Drawing.Color.Black;
-            this.btnXoaVeXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoaVeXe.Location = new System.Drawing.Point(913, 468);
-            this.btnXoaVeXe.Name = "btnXoaVeXe";
-            this.btnXoaVeXe.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaVeXe.TabIndex = 7;
-            this.btnXoaVeXe.Text = "Xóa";
-            this.btnXoaVeXe.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaVeXe
-            // 
-            this.btnSuaVeXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSuaVeXe.IconColor = System.Drawing.Color.Black;
-            this.btnSuaVeXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSuaVeXe.Location = new System.Drawing.Point(813, 468);
-            this.btnSuaVeXe.Name = "btnSuaVeXe";
-            this.btnSuaVeXe.Size = new System.Drawing.Size(75, 23);
-            this.btnSuaVeXe.TabIndex = 8;
-            this.btnSuaVeXe.Text = "Sửa";
-            this.btnSuaVeXe.UseVisualStyleBackColor = true;
-            // 
-            // btnThemVeXe
-            // 
-            this.btnThemVeXe.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThemVeXe.IconColor = System.Drawing.Color.Black;
-            this.btnThemVeXe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThemVeXe.Location = new System.Drawing.Point(703, 468);
-            this.btnThemVeXe.Name = "btnThemVeXe";
-            this.btnThemVeXe.Size = new System.Drawing.Size(75, 23);
-            this.btnThemVeXe.TabIndex = 9;
-            this.btnThemVeXe.Text = "Thêm";
-            this.btnThemVeXe.UseVisualStyleBackColor = true;
-            // 
-            // UpDownSoLuong
-            // 
-            this.UpDownSoLuong.Location = new System.Drawing.Point(278, 27);
-            this.UpDownSoLuong.Name = "UpDownSoLuong";
-            this.UpDownSoLuong.Size = new System.Drawing.Size(120, 27);
-            this.UpDownSoLuong.TabIndex = 13;
+            this.colSoDienThoai.DataPropertyName = "soDienThoai";
+            this.colSoDienThoai.HeaderText = "Số Điện Thoại";
+            this.colSoDienThoai.Name = "colSoDienThoai";
             // 
             // grDSThongTinVeXe
             // 
-            this.grDSThongTinVeXe.Controls.Add(this.dataGridView2);
+            this.grDSThongTinVeXe.Controls.Add(this.dgvTTVX);
             this.grDSThongTinVeXe.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grDSThongTinVeXe.Location = new System.Drawing.Point(572, 177);
             this.grDSThongTinVeXe.Name = "grDSThongTinVeXe";
@@ -305,39 +274,169 @@
             this.grDSThongTinVeXe.TabStop = false;
             this.grDSThongTinVeXe.Text = "Bảng Thông Tin Vé Xe";
             // 
-            // dataGridView2
+            // dgvTTVX
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(404, 244);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvTTVX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTTVX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colBienSoTTVX,
+            this.colMaChuyen,
+            this.colSoLuong});
+            this.dgvTTVX.Location = new System.Drawing.Point(6, 19);
+            this.dgvTTVX.Name = "dgvTTVX";
+            this.dgvTTVX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTTVX.Size = new System.Drawing.Size(404, 244);
+            this.dgvTTVX.TabIndex = 0;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa.IconColor = System.Drawing.Color.Black;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa.IconSize = 30;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(413, 454);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(106, 42);
+            this.btnXoa.TabIndex = 20;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.btnSua.IconColor = System.Drawing.Color.Black;
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.IconSize = 30;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(269, 454);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 42);
+            this.btnSua.TabIndex = 19;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnCapNhat.IconColor = System.Drawing.Color.Black;
+            this.btnCapNhat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCapNhat.IconSize = 30;
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.Location = new System.Drawing.Point(116, 454);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(111, 42);
+            this.btnCapNhat.TabIndex = 18;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // btnThem_TTVX
+            // 
+            this.btnThem_TTVX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem_TTVX.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem_TTVX.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnThem_TTVX.IconColor = System.Drawing.Color.Black;
+            this.btnThem_TTVX.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThem_TTVX.IconSize = 30;
+            this.btnThem_TTVX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem_TTVX.Location = new System.Drawing.Point(578, 454);
+            this.btnThem_TTVX.Name = "btnThem_TTVX";
+            this.btnThem_TTVX.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnThem_TTVX.Size = new System.Drawing.Size(105, 42);
+            this.btnThem_TTVX.TabIndex = 17;
+            this.btnThem_TTVX.Text = "Thêm";
+            this.btnThem_TTVX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem_TTVX.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa_TTVX
+            // 
+            this.btnXoa_TTVX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa_TTVX.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa_TTVX.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnXoa_TTVX.IconColor = System.Drawing.Color.Black;
+            this.btnXoa_TTVX.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa_TTVX.IconSize = 30;
+            this.btnXoa_TTVX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa_TTVX.Location = new System.Drawing.Point(876, 454);
+            this.btnXoa_TTVX.Name = "btnXoa_TTVX";
+            this.btnXoa_TTVX.Size = new System.Drawing.Size(106, 42);
+            this.btnXoa_TTVX.TabIndex = 22;
+            this.btnXoa_TTVX.Text = "Xóa";
+            this.btnXoa_TTVX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa_TTVX.UseVisualStyleBackColor = true;
+            // 
+            // btnSua_TTVX
+            // 
+            this.btnSua_TTVX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua_TTVX.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua_TTVX.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.btnSua_TTVX.IconColor = System.Drawing.Color.Black;
+            this.btnSua_TTVX.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua_TTVX.IconSize = 30;
+            this.btnSua_TTVX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua_TTVX.Location = new System.Drawing.Point(726, 454);
+            this.btnSua_TTVX.Name = "btnSua_TTVX";
+            this.btnSua_TTVX.Size = new System.Drawing.Size(107, 42);
+            this.btnSua_TTVX.TabIndex = 21;
+            this.btnSua_TTVX.Text = "Sửa";
+            this.btnSua_TTVX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua_TTVX.UseVisualStyleBackColor = true;
+            // 
+            // colBienSoTTVX
+            // 
+            this.colBienSoTTVX.DataPropertyName = "bienSo";
+            this.colBienSoTTVX.HeaderText = "Biển Số";
+            this.colBienSoTTVX.Name = "colBienSoTTVX";
+            // 
+            // colMaChuyen
+            // 
+            this.colMaChuyen.DataPropertyName = "maChuyen";
+            this.colMaChuyen.HeaderText = "Mã Chuyến";
+            this.colMaChuyen.Name = "colMaChuyen";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "soLuong";
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.Name = "colSoLuong";
             // 
             // FormsQuanLyXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 522);
+            this.Controls.Add(this.btnXoa_TTVX);
+            this.Controls.Add(this.btnSua_TTVX);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.btnThem_TTVX);
             this.Controls.Add(this.grDSThongTinVeXe);
-            this.Controls.Add(this.btnThemVeXe);
-            this.Controls.Add(this.btnSuaVeXe);
-            this.Controls.Add(this.btnXoaVeXe);
-            this.Controls.Add(this.btnXoaXe);
-            this.Controls.Add(this.btnSuaXe);
-            this.Controls.Add(this.btnLuuXe);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvXe);
             this.Controls.Add(this.grThongTinVeXe);
             this.Controls.Add(this.grThongTinXe);
             this.Name = "FormsQuanLyXe";
             this.Text = "Quản Lý Xe";
+            this.Load += new System.EventHandler(this.FormsQuanLyXe_Load);
             this.grThongTinXe.ResumeLayout(false);
             this.grThongTinXe.PerformLayout();
             this.grThongTinVeXe.ResumeLayout(false);
             this.grThongTinVeXe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UpDownSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).EndInit();
             this.grDSThongTinVeXe.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTTVX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,17 +445,11 @@
 
         private System.Windows.Forms.GroupBox grThongTinXe;
         private System.Windows.Forms.GroupBox grThongTinVeXe;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private FontAwesome.Sharp.IconButton btnLuuXe;
-        private FontAwesome.Sharp.IconButton btnSuaXe;
-        private FontAwesome.Sharp.IconButton btnXoaXe;
-        private FontAwesome.Sharp.IconButton btnXoaVeXe;
-        private FontAwesome.Sharp.IconButton btnSuaVeXe;
-        private FontAwesome.Sharp.IconButton btnThemVeXe;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvXe;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.TextBox txtTaiXe;
+        private System.Windows.Forms.TextBox txtTenXe;
+        private System.Windows.Forms.TextBox txtBienSo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -366,8 +459,21 @@
         private System.Windows.Forms.Label lblMaChuyen;
         private System.Windows.Forms.TextBox txtBienSo_TTVX;
         private System.Windows.Forms.Label lblBienSo_TTVX;
-        private System.Windows.Forms.NumericUpDown UpDownSoLuong;
+        private System.Windows.Forms.NumericUpDown UDSoLuong;
         private System.Windows.Forms.GroupBox grDSThongTinVeXe;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvTTVX;
+        private FontAwesome.Sharp.IconButton btnXoa;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnCapNhat;
+        private FontAwesome.Sharp.IconButton btnThem_TTVX;
+        private FontAwesome.Sharp.IconButton btnXoa_TTVX;
+        private FontAwesome.Sharp.IconButton btnSua_TTVX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBienSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTaiXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBienSoTTVX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaChuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
     }
 }

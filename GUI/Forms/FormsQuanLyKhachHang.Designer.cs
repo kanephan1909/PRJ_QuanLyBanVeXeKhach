@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grid_DSChuyenDi = new System.Windows.Forms.DataGridView();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblGmail = new System.Windows.Forms.Label();
             this.lblCCCD = new System.Windows.Forms.Label();
             this.lblSoDienThoai = new System.Windows.Forms.Label();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnCapNhat = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtGmail = new System.Windows.Forms.TextBox();
             this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCanCuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_DSChuyenDi)).BeginInit();
+            this.colGmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
-            // grid_DSChuyenDi
+            // dgvKhachHang
             // 
-            this.grid_DSChuyenDi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_DSChuyenDi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoDienThoai,
             this.colCanCuoc,
             this.colHoTen,
             this.colGioiTinh,
             this.colDiaChi,
-            this.colEmail});
-            this.grid_DSChuyenDi.Location = new System.Drawing.Point(153, 185);
-            this.grid_DSChuyenDi.Name = "grid_DSChuyenDi";
-            this.grid_DSChuyenDi.Size = new System.Drawing.Size(783, 290);
-            this.grid_DSChuyenDi.TabIndex = 29;
+            this.colGmail});
+            this.dgvKhachHang.Location = new System.Drawing.Point(153, 185);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKhachHang.Size = new System.Drawing.Size(783, 290);
+            this.dgvKhachHang.TabIndex = 29;
             // 
             // txtDiaChi
             // 
@@ -97,12 +98,12 @@
             this.txtCCCD.Size = new System.Drawing.Size(134, 20);
             this.txtCCCD.TabIndex = 24;
             // 
-            // txtSDT
+            // txtSoDienThoai
             // 
-            this.txtSDT.Location = new System.Drawing.Point(152, 68);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(146, 20);
-            this.txtSDT.TabIndex = 23;
+            this.txtSoDienThoai.Location = new System.Drawing.Point(152, 68);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(146, 20);
+            this.txtSoDienThoai.TabIndex = 23;
             // 
             // lblDiaChi
             // 
@@ -134,15 +135,15 @@
             this.lblHoTen.TabIndex = 20;
             this.lblHoTen.Text = "Họ Tên:";
             // 
-            // lblEmail
+            // lblGmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(567, 49);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(44, 16);
-            this.lblEmail.TabIndex = 19;
-            this.lblEmail.Text = "Email:";
+            this.lblGmail.AutoSize = true;
+            this.lblGmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGmail.Location = new System.Drawing.Point(567, 49);
+            this.lblGmail.Name = "lblGmail";
+            this.lblGmail.Size = new System.Drawing.Size(45, 16);
+            this.lblGmail.TabIndex = 19;
+            this.lblGmail.Text = "Gmail:";
             // 
             // lblCCCD
             // 
@@ -180,6 +181,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -197,6 +199,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnCapNhat
             // 
@@ -214,6 +217,7 @@
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
@@ -232,13 +236,14 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtEmail
+            // txtGmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(570, 68);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(148, 20);
-            this.txtEmail.TabIndex = 34;
+            this.txtGmail.Location = new System.Drawing.Point(570, 68);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Size = new System.Drawing.Size(148, 20);
+            this.txtGmail.TabIndex = 34;
             // 
             // colSoDienThoai
             // 
@@ -270,37 +275,37 @@
             this.colDiaChi.HeaderText = "Địa Chỉ";
             this.colDiaChi.Name = "colDiaChi";
             // 
-            // colEmail
+            // colGmail
             // 
-            this.colEmail.DataPropertyName = "email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
+            this.colGmail.DataPropertyName = "gmail";
+            this.colGmail.HeaderText = "Gmail";
+            this.colGmail.Name = "colGmail";
             // 
             // FormsQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 581);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.grid_DSChuyenDi);
+            this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtCCCD);
-            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.lblGioiTinh);
             this.Controls.Add(this.lblHoTen);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblGmail);
             this.Controls.Add(this.lblCCCD);
             this.Controls.Add(this.lblSoDienThoai);
             this.Name = "FormsQuanLyKhachHang";
             this.Text = "Quản Lý Khách Hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.grid_DSChuyenDi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,24 +317,24 @@
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnCapNhat;
         private FontAwesome.Sharp.IconButton btnThem;
-        private System.Windows.Forms.DataGridView grid_DSChuyenDi;
+        private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtCCCD;
-        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.Label lblHoTen;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblGmail;
         private System.Windows.Forms.Label lblCCCD;
         private System.Windows.Forms.Label lblSoDienThoai;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtGmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCanCuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGmail;
     }
 }

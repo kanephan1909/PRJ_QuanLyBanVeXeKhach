@@ -41,9 +41,10 @@ namespace GUI.Forms
                     btnGhe.Location = new Point(x, y);
                     btnGhe.Size = new Size(40, 40);
                     btnGhe.Text = "B" + dem.ToString();  
-                    btnGhe.BackColor = Color.LightGray;
+                    btnGhe.BackColor = Color.WhiteSmoke;
                     btnGhe.ForeColor = Color.Black;
                     btnGhe.Font = new Font("Arial", 8, FontStyle.Bold);
+                    btnGhe.Click += BtnGhe_Click;
                     btnGhe.FlatStyle = FlatStyle.Flat;
                     btnGhe.FlatAppearance.BorderSize = 1;
                     panelGheTangTren.Controls.Add(btnGhe);
@@ -70,7 +71,7 @@ namespace GUI.Forms
                     btnGhe.Location = new Point(x, y);
                     btnGhe.Size = new Size(40, 40);
                     btnGhe.Text = "A" + dem.ToString();
-                    btnGhe.BackColor = Color.LightGray;
+                    btnGhe.BackColor = Color.WhiteSmoke;
                     btnGhe.ForeColor = Color.Black;
                     btnGhe.Font = new Font("Arial", 8, FontStyle.Bold);
                     btnGhe.FlatStyle = FlatStyle.Flat;
@@ -92,7 +93,7 @@ namespace GUI.Forms
                 MessageBox.Show("Ghế này đã có người đặt!!!!");
                 return;
             }
-            btnGhe.BackColor = (btnGhe.BackColor == Color.LightGray) ? Color.DarkOrange : Color.LightGray;
+            btnGhe.BackColor = (btnGhe.BackColor == Color.WhiteSmoke) ? Color.DeepSkyBlue : Color.WhiteSmoke;
         }
 
         private void panelGheTangDuoi_Load(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace GUI.Forms
 
         }
 
-        ChuyenDiBLL bll_chuyendi = new ChuyenDiBLL();
+        ChuyenDiBLL chuyendi = new ChuyenDiBLL();
         DataTable table_chuyendi = new DataTable();
 
 
@@ -116,10 +117,11 @@ namespace GUI.Forms
 
         private void loadLichTrinh()
         {
-            table_chuyendi = bll_chuyendi.GetTableChuyenDi();
+            table_chuyendi = chuyendi.GetTableChuyenDi();
             comboChonGio.DataSource = table_chuyendi;
             comboDiemDen.DataSource = table_chuyendi;
             comboDiemDi.DataSource = table_chuyendi;
         }
+
     }
 }

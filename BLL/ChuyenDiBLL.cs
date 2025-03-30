@@ -10,11 +10,11 @@ namespace BLL
 {
     public class ChuyenDiBLL
     {
-        ChuyenDiDAL dal_chuyendi = new ChuyenDiDAL();
+        ChuyenDiDAL chuyendi = new ChuyenDiDAL();
 
         public DataTable GetTableChuyenDi()
         {
-            return dal_chuyendi.LoadDSChuyenDi();
+            return chuyendi.GetChuyenDi();
         }
     }
 }
