@@ -1,0 +1,6 @@
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\bin\Debug\DTO.dll
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\bin\Debug\DTO.pdb
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\obj\Debug\DTO.dll
+C:\Users\pkhan\source\repos\PR_QuanLyBanVeBus\DTO\obj\Debug\DTO.pdb
